@@ -20,8 +20,7 @@ public class Address {
         this.city = city;
     }
 
-    public Address() {
-    }
+    public Address() {}
 
     public int getAddressId() {
         return addressId;
