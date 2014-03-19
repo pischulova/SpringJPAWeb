@@ -19,6 +19,7 @@
     <table name="ADDRESS" schema="APP" catalog="" type="TABLE">
       <column name="ADDRESSID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" def="R0VORVJBVEVEX0JZX0RFRkFVTFQ=" autoIncrement="true"/>
       <column name="AD" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="CITY" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="SQL140316154823160" columns="ADDRESSID"/>
       <exported-key name="FK_QDJKGEOKNBP0K9S5R6RDS2MJ2" table="PERSON" schema="APP" catalog="" columns="ADDRESSID"/>
     </table>

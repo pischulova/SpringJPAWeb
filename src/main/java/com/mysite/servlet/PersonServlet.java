@@ -28,7 +28,7 @@ public class PersonServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+        //SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
     @Override
@@ -37,6 +37,7 @@ public class PersonServlet extends HttpServlet {
         String name = request.getParameter("name");
         String city = request.getParameter("city");
         out.print(name+"\n"+city+"\n");
+
         if(name!=null && city!=null){
             personService.createPerson(name);
             addressService.createAddress(city);
