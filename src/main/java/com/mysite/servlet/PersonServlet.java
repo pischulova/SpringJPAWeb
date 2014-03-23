@@ -24,11 +24,12 @@ import java.util.List;
 public class PersonServlet extends HttpServlet {
     @Autowired
     private PersonService personService;
+    @Autowired
     private AddressService addressService;
 
     @Override
     public void init() throws ServletException {
-        //SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+//        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
     @Override
@@ -61,6 +62,5 @@ public class PersonServlet extends HttpServlet {
         for(Person p: list) {
             out.print(p);
         }
-
     }
 }

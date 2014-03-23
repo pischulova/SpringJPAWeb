@@ -2,6 +2,8 @@ package com.mysite.dao;
 
 import com.mysite.entity.Person;
 import org.springframework.stereotype.Repository;
+
+import javax.annotation.PostConstruct;
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,9 +12,15 @@ import java.util.List;
  */
 @Repository
 public class PersonDao {
-    @PersistenceContext   //сюда инжектит бин, который реализуется в персистенс контексте
+    @PersistenceContext
     private EntityManager em;
 
+//    @PersistenceContext   //сюда инжектит бин, который реализуется в персистенс контексте
+    public void setEntityManager(final EntityManager em){
+        this.em = em;
+    }
+
+    @PostConstruct
     public void savePerson(Person person){
         em.persist(person);
     }
