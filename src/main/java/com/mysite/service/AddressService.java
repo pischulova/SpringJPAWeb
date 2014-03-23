@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 public class AddressService {
     @Autowired
-    private AddressDao addressDao=new AddressDao();
+    private AddressDao addressDao;
 
     @Transactional
     public void createAddress(String city) {

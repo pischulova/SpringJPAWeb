@@ -32,4 +32,9 @@ public class PersonService {
     public List<Person> findAll() {
         return personDao.findAll();
     }
+
+    @Transactional
+    public void updatePerson(Person person) {
+        personDao.updatePerson(person);
+    }
 }

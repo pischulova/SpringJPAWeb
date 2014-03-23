@@ -29,7 +29,7 @@ public class PersonServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-//        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
     @Override
@@ -45,6 +45,7 @@ public class PersonServlet extends HttpServlet {
             Person person = personService.findPerson(name);
             Address address = addressService.findAddress(city);
             person.setAddress(address);
+            personService.updatePerson(person);
 
             List<Person> list = personService.findAll();
             for(Person p: list) {

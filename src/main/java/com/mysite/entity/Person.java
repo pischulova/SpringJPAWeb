@@ -45,11 +45,17 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "personId=" + personId +
-                ", name='" + name + '\'' +
-                ", address=" + address +
-                '}';
+        if (address!=null)
+            return "Person{" +
+                    "personId=" + personId +
+                    ", name='" + name + '\'' +
+                    ", address=" + address.toString() +
+                    '}';
+        else
+            return "Person{" +
+                    "personId=" + personId +
+                    ", name='" + name + '\'' +
+                    ", address=null";
     }
 
     public Address getAddress() {
